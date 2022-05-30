@@ -2,20 +2,11 @@
   "name": "lerna-import-example",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "rollup": "rollup -c"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thomiles/lerna-import-example.git"
-  },
-  "author": "",
+  "author": "Thomas Heritier",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thomiles/lerna-import-example/issues"
-  },
-  "homepage": "https://github.com/thomiles/lerna-import-example#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "22.0.0",
     "@rollup/plugin-node-resolve": "13.3.0",
@@ -25,5 +16,11 @@
     "rollup": "2.75.3",
     "rollup-plugin-dts": "4.2.2",
     "typescript": "4.7.2"
-  }
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
 }
